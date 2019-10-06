@@ -12,6 +12,7 @@ export default function Login({ navigation }) {
     useEffect(() => {
         AsyncStorage.getItem('user').then(user => {
             if(user) {
+                //AsyncStorage.removeItem('user');
                 navigation.navigate('List');   
             }
         })
